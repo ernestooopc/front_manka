@@ -1,0 +1,8 @@
+#formularioCrear{
+    margin: 1%;
+}
+
+.formulario input,select,option{
+    width: 50%;
+
+}
