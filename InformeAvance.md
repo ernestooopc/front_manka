@@ -18,7 +18,7 @@ git pull
 - ingreso de productos sin imagen
 - editar cliente
 - listado simple de productos(catalogo)
-- informacion adcional de producto
+- informacion adicional de producto
 
 # sprint 2:
 
