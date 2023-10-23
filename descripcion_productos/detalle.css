@@ -1,4 +1,15 @@
 *{
-    background-color: black;
+    
     color: aliceblue;
+}
+#catalogoMenu .container .row, h1{
+    margin: 3%;
+  
+}
+
+#catalogoMenu .cardMenu{
+   
+}
+#contenido {
+    background-color: black;
 }
