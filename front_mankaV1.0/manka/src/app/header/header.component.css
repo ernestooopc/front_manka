@@ -1,0 +1,24 @@
+#catalogoMenu .container .row, h1{
+    margin: 3%;
+  
+}
+.dropdown-toggle {
+    cursor: pointer;
+  }
+
+.fondo{
+    background: #333333;
+}
+
+.fondo ul li {
+    color: white;
+}
+  
+.titulo a{
+    color: white;
+}
+  
+
+.dropdown-menu a{
+    color: #333333;
+}

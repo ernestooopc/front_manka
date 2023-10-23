@@ -1,0 +1,31 @@
+<div class="titulo">
+  <h2>Catalogo de Menu</h2>
+</div>
+
+<div class="container text-center" *ngIf="producto">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let producto of producto">
+      <a href="https://rokys.com/" class="card-link">
+        <div class="card cartas">
+          <img [src]="producto.prodimagen" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.prodnombre }}</h5>
+            <div class="card-text overflow-auto" style="max-height: 200px;">
+              {{ producto.proddescripcion }}
+            </div>
+            <div>
+              Precio: S/{{producto.prodprecio}}
+            </div>
+          </div>          
+          <div class="card-body">
+            <a [routerLink]="['/detalle-producto', producto.prodid]">
+            <button class="btn btn-primary">Agregar al carrito</button>
+            </a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+  

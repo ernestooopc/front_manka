@@ -1,0 +1,36 @@
+.cartas{
+    margin: 5%;
+    text-decoration: none;    
+    background-color: white;
+    color: black;
+
+}
+.cartas:hover{
+    background-color: #CBCBCB;
+
+}
+
+.descripcion{
+    height: 30px; 
+
+}
+
+.card-link{
+    text-decoration: none;
+}
+
+.titulo{    
+    padding:3%;
+}
+
+.btn{
+    background-color: #FF8A00;
+    color: black;
+    border: none;
+
+}
+
+.btn:hover{
+    background-color: #FFAC4A ;
+    color: black;
+}

@@ -1,0 +1,30 @@
+<div class="detalle-producto">
+    <div class="titulo">
+      <h2>Detalle de Producto</h2>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="producto-details" *ngIf="producto">
+            <img [src]="producto.prodimagen" alt="Imagen del producto">
+            <h3>{{ producto.prodnombre }}</h3>
+            <p class="descripcion">{{ producto.proddescripcion }}</p>
+            <p class="precio">Precio: S/{{ producto.prodprecio }}</p>
+            <p class="estado">Estado: {{ producto.prodestado === 1 ? 'Activo' : 'Inactivo' }}</p>
+            <h4>Detalles del Tipo de Producto</h4>
+            <div class="tipo-producto" *ngIf="producto.tipoproducto">
+                Nombre del Tipo de Producto: {{ producto.tipoproducto.tpronombretipo }}
+            </div>
+            <div *ngIf="producto.tipoproducto">
+                <p class="tipo-estado">Estado del Tipo de Producto: {{producto.tipoproducto.tproestado === 1 ? 'Activo' : 'Inactivo' }}</p>
+            </div>
+          </div>
+          <div class="producto-details" *ngIf="!producto">
+            <p>Producto no encontrado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
