@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
@@ -14,14 +14,16 @@ import { FormsModule } from '@angular/forms';
 import { ProductoListComponent } from './producto-list/producto-list.component';
 import { HeaderComponent } from './header/header.component';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
+import { CarritoDetalleComponent } from './carrito-detalle/carrito-detalle.component';
 
 const routes:Routes=[
   {path:'catalogo',component:ProductoListComponent},
   { path: 'detalle-producto/:id', component: DetalleProductoComponent }, // Ruta para el Detalle de Producto
+  {path:'carrito', component:CarritoDetalleComponent}
   // {path:'404',component:Pagina404Component},
   // {path:'usuario/form',component:FormComponent},
   // {path:'usuario/form/:id',component:FormComponent},
-  {path:'**', redirectTo:'404', pathMatch:'full'}
+  // {path:'**', redirectTo:'404', pathMatch:'full'}
 ]
 
 
@@ -32,6 +34,7 @@ const routes:Routes=[
     ProductoListComponent,
     HeaderComponent,
     DetalleProductoComponent,
+    CarritoDetalleComponent,
     
     
     // UsuariosComponent,

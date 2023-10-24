@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 id="titulo">Detalles del Carrito</h1>
+    <button id="cancelar" class="btn btn-primary" (click)="volverAlCatalogo()">cancelar</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Precio Total</th>
+          <th>Acciones</th> <!-- Columna para los botones -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of productosEnCarrito">
+            <td>{{ item.producto.prodnombre }}</td>
+            <td>
+              <span class="editable-quantity" [ngClass]="{'editing': item.editing}">
+                <span *ngIf="!item.editing">{{ item.cantidad }}</span>
+                <input *ngIf="item.editing" type="number" [(ngModel)]="item.cantidadEditada" min="1">
+              </span>
+            </td>
+            <td>S/{{ item.producto.prodprecio.toFixed(2) }}</td>
+            <td>S/{{ ((item.cantidadEditada || item.cantidad) * item.producto.prodprecio).toFixed(2) }}</td>
+            <td>
+                <button class="btn btn-secondary btn-sm" (click)="toggleEditing(item)">{{ item.editing ? 'Guardar' : 'Editar' }}</button> |
+              <button class="btn btn-danger btn-sm" (click)="eliminarProducto(item)">Eliminar</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    
+    <p class="h4">Precio Total Global: S/{{ precioTotalGlobal.toFixed(2) }}</p>
+    
+    <div class="text-right">
+      <button class="btn btn-success" >Pagar</button>
+    </div>
+  </div>
+
+

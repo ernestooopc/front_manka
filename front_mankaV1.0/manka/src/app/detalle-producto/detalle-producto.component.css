@@ -1,0 +1,16 @@
+.titulo{
+    margin: 3%;
+    color: #F6E7D8;
+}
+
+.producto-details{
+    line-height: 2;
+    font-size:30px;
+    color: #F6E7D8;
+
+}
+
+#input-cantidad{
+    max-width: 15%;
+    text-align: center;
+}

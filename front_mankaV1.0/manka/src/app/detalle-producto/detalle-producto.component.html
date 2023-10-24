@@ -8,17 +8,38 @@
         <div class="col-lg-12">
           <div class="producto-details" *ngIf="producto">
             <img [src]="producto.prodimagen" alt="Imagen del producto">
-            <h3>{{ producto.prodnombre }}</h3>
+            <h2>{{ producto.prodnombre }}</h2>
             <p class="descripcion">{{ producto.proddescripcion }}</p>
-            <p class="precio">Precio: S/{{ producto.prodprecio }}</p>
+            <p class="precio">Precio: S/{{ producto.prodprecio }} soles</p>
             <p class="estado">Estado: {{ producto.prodestado === 1 ? 'Activo' : 'Inactivo' }}</p>
-            <h4>Detalles del Tipo de Producto</h4>
+            <h2>Detalles del Tipo de Producto</h2>
             <div class="tipo-producto" *ngIf="producto.tipoproducto">
                 Nombre del Tipo de Producto: {{ producto.tipoproducto.tpronombretipo }}
             </div>
             <div *ngIf="producto.tipoproducto">
                 <p class="tipo-estado">Estado del Tipo de Producto: {{producto.tipoproducto.tproestado === 1 ? 'Activo' : 'Inactivo' }}</p>
             </div>
+            <h3>Cantidad:</h3>
+            <div class="input-group">
+              <span class="input-group-text">
+                <button class="btn btn-outline-primary" (click)="restarCantidad()">-</button>
+              </span>
+              <input
+                id="input-cantidad"
+                type="number"
+                class="form-control"
+                [(ngModel)]="cantidad"
+                min="1"
+                value="1"
+              />
+              <span class="input-group-text">
+                <button class="btn btn-outline-primary" (click)="sumarCantidad()">+</button>
+              </span>
+            </div>
+            
+              <button class="btn btn-success"  (click)="agregarAlCarrito()">Agregar al carrito</button> | 
+              <button class="btn btn-danger"  [routerLink]="['/catalogo']">Volver</button>
+
           </div>
           <div class="producto-details" *ngIf="!producto">
             <p>Producto no encontrado</p>
