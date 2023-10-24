@@ -3,7 +3,7 @@ export class Producto {
     codmenu!: string;
     prodnombre!: string;
     proddescripcion!: string;
-    prodimagen!: any; // Puedes ajustar el tipo según tus necesidades
+    prodimagen!:  Uint8Array | any; // Puedes ajustar el tipo según tus necesidades
     prodprecio!: number;
     prodfregistro!: Date; // Puedes ajustar el tipo a 'string' o 'Date' según tus necesidades
     tipoproducto!: TipoProducto;

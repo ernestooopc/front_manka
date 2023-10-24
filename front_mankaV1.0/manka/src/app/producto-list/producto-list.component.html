@@ -5,7 +5,7 @@
 <div class="container text-center" *ngIf="producto">
   <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let producto of producto">
-      <a href="https://rokys.com/" class="card-link">
+      <a [routerLink]="['/detalle-producto', producto.prodid]" class="card-link">
         <div class="card cartas">
           <img [src]="producto.prodimagen" class="card-img-top" alt="Imagen del producto">
           <div class="card-body">
