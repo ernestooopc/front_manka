@@ -1,0 +1,74 @@
+<form (submit)="isEditing ? editarCliente() : guardarCliente()">
+    <!-- Tipo de Documento -->
+    <div class="mb-3" *ngIf="isEditing">
+        <label for="clieId" class="form-label">ID del Cliente</label>
+        <input type="text" id="clieId" class="form-control" [(ngModel)]="cliente.clieteid" name="clieid" [disabled]="!isEditing">
+    </div>
+    
+    
+      
+      
+    <div class="mb-3">
+      <label for="clieTipoDocumento" class="form-label">Tipo de Documento</label>
+      <select id="clieTipoDocumento" class="form-select" [(ngModel)]="cliente.clietipodocumento" name="clietipodocumento">
+        <option value="DNI">DNI</option>
+        <option value="Pasaporte">Pasaporte</option>
+        <option value="Carné de Extranjería">Carné de Extranjería</option>
+      </select>
+    </div>
+  
+    <!-- Número de Documento -->
+    <div class="mb-3">
+      <label for="clieNumDocumento" class="form-label">Número de Documento</label>
+      <input type="text" id="clieNumDocumento" class="form-control" [(ngModel)]="cliente.clienumdocumento" name="clienumdocumento">
+    </div>
+  
+    <!-- Nombres -->
+    <div class="mb-3">
+      <label for="clieNombres" class="form-label">Nombres</label>
+      <input type="text" id="clieNombres" class="form-control" [(ngModel)]="cliente.clienombres" name="clienombres">
+    </div>
+  
+    <!-- Apellidos -->
+    <div class="mb-3">
+      <label for="clieApellidos" class="form-label">Apellidos</label>
+      <input type="text" id="clieApellidos" class="form-control" [(ngModel)]="cliente.clieapellidos" name="clieapellidos">
+    </div>
+  
+    <!-- Celular -->
+    <div class="mb-3">
+      <label for="clieCelular" class="form-label">Celular</label>
+      <input type="text" id="clieCelular" class="form-control" [(ngModel)]="cliente.cliecelular" name="cliecelular">
+    </div>
+  
+    <!-- Correo -->
+    <div class="mb-3">
+      <label for="clieCorreo" class="form-label">Correo Electrónico</label>
+      <input type="email" id="clieCorreo" class="form-control" [(ngModel)]="cliente.cliecorreo" name="cliecorreo">
+    </div>
+  
+    <!-- Dirección -->
+    <div class="mb-3">
+      <label for="clieDireccion" class="form-label">Dirección</label>
+      <textarea id="clieDireccion" class="form-control" [(ngModel)]="cliente.cliedireccion" name="cliedireccion"></textarea>
+    </div>
+  
+    <!-- Fecha de Nacimiento -->
+    <div class="mb-3">
+      <label for="clieFnacimiento" class="form-label">Fecha de Nacimiento</label>
+      <input type="date" id="clieFnacimiento" class="form-control" [(ngModel)]="cliente.cliefnacimiento" name="cliefnacimiento">
+    </div>
+  
+    <!-- Estado -->
+    <div class="mb-3">
+      <label for="clieEstado" class="form-label">Estado</label>
+      <select id="clieEstado" class="form-select" [(ngModel)]="cliente.clieestado" name="clieestado">
+        <option value="1">Activo</option>
+        <option value="0">Inactivo</option>
+      </select>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">
+      {{ isEditing ? 'Editar' : 'Guardar' }}
+    </button>
+  </form>

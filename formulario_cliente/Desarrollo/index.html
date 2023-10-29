@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Registrar Producto</title>
+</head>
+<body>
+    <section id="encabezado">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Manka</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">     
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Ventanas
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/formulario_cliente/crearCliente.html">Crear Producto</a></li>
+                      <li><a class="dropdown-item" href="/catalogo_productos/catalogoProducto.html">Catalogo de Productos</a></li>                  
+                      <li><a class="dropdown-item" href="/descripcion_productos/detalleProducto.html">Detalle de Producto</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/detalle_pedido/detallepedido.html">Vizualizar pedido Cliente</a></li>
+    
+                    </ul>
+                  </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Login</a>
+                      </li>        
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>  
+                  <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                            <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717L5.07 1.243zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3z"/>
+                          </svg>
+                    </a>
+                  </div>                       
+                </ul>                    
+              </div>
+                       
+            </div>
+          </nav>
+        </section>
+
+    <div class="container p-4" style="background-color: #e9f5f5;">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="alert alert-danger" id="alert" role="alert">
+                    Complete todos los campos
+                </div>
+                <h3 class="text-center">Registro</h3>
+                <form >
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="mb-3">
+                      <label for="lastname" class="form-label">Apellidos</label>
+                      <input type="text" class="form-control" id="lastname" placeholder="Ingrese sus apellidos">
+                    </div>
+                    <div class="mb-3">
+                      <label for="Document_type" class="form-label">Tipo de Documento</label>
+                      <select class="form-select" name="Document_type" id="Document_type"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="num_document" class="form-label">Número de Documento</label>
+                        <input type="text" class="form-control" id="num_document" placeholder="Ingrese su número de documento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cel" class="form-label">Celular</label>
+                        <input type="text" class="form-control" id="cel" placeholder="Ingrese su número de celular">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo</label>
+                        <input type="text" class="form-control" id="email" placeholder="Ingrese su correo">
+                    </div>
+                    <div class="mb-3">
+                      <label for="address" class="form-label">Dirección</label>
+                      <input type="text" class="form-control" id="address" placeholder="Ingrese su dirección">
+                    </div>
+                    <div class="mb-3">
+                      <label for="birth_date" class="form-label">Fecha de nacimiento</label>
+                      <input type="date" class="form-control" id="birth_date" placeholder="Ingrese su fecha de nacimiento">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

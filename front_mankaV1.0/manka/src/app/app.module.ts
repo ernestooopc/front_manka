@@ -15,12 +15,14 @@ import { ProductoListComponent } from './producto-list/producto-list.component';
 import { HeaderComponent } from './header/header.component';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import { CarritoDetalleComponent } from './carrito-detalle/carrito-detalle.component';
+import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 
 const routes:Routes=[
   {path:'catalogo',component:ProductoListComponent},
-  { path: 'detalle-producto/:id', component: DetalleProductoComponent }, // Ruta para el Detalle de Producto
-  {path:'carrito', component:CarritoDetalleComponent}
-  // {path:'404',component:Pagina404Component},
+  { path:'detalle-producto/:id', component: DetalleProductoComponent }, // Ruta para el Detalle de Producto
+  {path:'carrito', component:CarritoDetalleComponent},
+  {path:'clientes/nuevo',component:ClienteFormComponent},
+  {path:'clientes/editar/:id',component:ClienteFormComponent}
   // {path:'usuario/form',component:FormComponent},
   // {path:'usuario/form/:id',component:FormComponent},
   // {path:'**', redirectTo:'404', pathMatch:'full'}
@@ -35,6 +37,7 @@ const routes:Routes=[
     HeaderComponent,
     DetalleProductoComponent,
     CarritoDetalleComponent,
+    ClienteFormComponent,
     
     
     // UsuariosComponent,
